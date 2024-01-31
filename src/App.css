@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leftee {
+    background: url('./assets/left.png') no-repeat;
+    background-size: cover;
+    /* Additional styling if needed */
+  }
+  
+  @media (max-width: 786px) {
+    .leftee {
+      background: #605BFF /* Remove background on screens 786 pixels and smaller */
+    }
+  }
+  
