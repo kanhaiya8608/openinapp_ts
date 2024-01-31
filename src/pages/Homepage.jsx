@@ -99,7 +99,7 @@ const Homepage = ({ token }) => {
             >
               <img className='mx-auto h-10 w-10 mb-4' src="/images/excel.png" alt="" />
               <button className=' px-4 py-2 rounded w-full'>
-                Drop your Excel sheet here or <span className='text-blue'>browse</span>
+                Drop your Excel sheet here or <span className='text-blue-700'>browse</span>
               </button>
             </label>
             <button onClick={handleRealUpload} disabled={isUploading} className='w-full mt-4 bg-indigo-500 text-white px-4 py-2 rounded'>
