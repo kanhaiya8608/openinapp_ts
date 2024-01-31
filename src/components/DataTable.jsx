@@ -102,7 +102,7 @@ const DataTable = ({ data }) => {
   } = useTable({ columns, data: tableData });
 
   return (
-    <div className=''>
+    <div className='overflow-x-auto'>
       <h3 className='text-4xl'>Uploads</h3>
       <table
         {...getTableProps()}
