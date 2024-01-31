@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { SignUp, Login, Homepage } from './pages';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-  const [token, setToken] = useState(false);
+  // Check if token is present in localStorage during initial load
+  const initialToken = JSON.parse(localStorage.getItem('token')) || false;
 
-  if (token) {
-    sessionStorage.setItem('token', JSON.stringify(token));
-  }
+  const [token, setToken] = useState(initialToken);
 
+  // Update localStorage whenever token changes
   useEffect(() => {
-    if (sessionStorage.getItem('token')) {
-      let data = JSON.parse(sessionStorage.getItem('token'));
-      setToken(data);
+    if (token) {
+      localStorage.setItem('token', JSON.stringify(token));
     }
-  }, []);
+  }, [token]);
 
   return (
     <div>
